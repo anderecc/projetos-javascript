@@ -1,0 +1,63 @@
+body
+    margin: 0
+    padding: 0
+    background-color: lightblue
+    display: flex
+    justify-content: center
+    align-items: center
+    color: darkgreen
+    height: 100vh
+    font-family: monospace
+
+.container
+    background-color: rgba(255, 255, 255, .3)
+    border-radius: 10px
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, .3)
+    width: 85%
+    max-width: 400px
+    text-align: center
+    padding: 20px
+
+.heading
+    margin: 5px
+    font-size: 30px
+
+.ratings-container
+    display: flex
+    padding: 20px 0
+    justify-content: space-evenly
+
+.rating
+    cursor: pointer
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    margin: 10px 5px
+    padding: 10px 20px
+    transition: .4s
+    border-radius: 5px
+    &:hover
+        background-color: rgba(255, 255, 255, .3)
+        transform: scale(1.1)
+
+.rating.active
+    background-color: darkseagreen
+
+.rating
+    img
+        width: 40px
+        margin-bottom: 5px
+
+.btn
+    padding: 10px 20px
+    border: none
+    background-color: darkcyan
+    color: white
+    border-radius: 5px
+    cursor: pointer
+    transition: all .3s
+    &:hover
+        background-color: darkgreen
+    &:active
+        transform: scale(.95)

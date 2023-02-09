@@ -1,0 +1,38 @@
+body
+    margin: 0
+    padding: 0
+    height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: salmon
+    font-family: 'Courier New', Courier, monospace
+
+.container
+    background-color: rgba(255, 255, 255, .4)
+    border-radius: 10px
+    display: flex
+    flex-direction: column
+    padding: 40px
+    box-shadow: 5px 5px 8px black
+    text-align: center
+    margin: 5%
+
+.input
+    padding: 5px 10px
+    border: 2px solid transparent
+    border-radius: 5px
+    font-size: 1.2rem
+    outline: none
+    &:focus
+        border: solid 2px darkorange
+
+.meaning-container
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    display: none
+
+span
+    font-weight: bold
