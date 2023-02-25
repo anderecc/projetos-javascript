@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./css/estilo.css" />
+        <link rel="stylesheet" href="./css/animation.css" />
+        <link rel="stylesheet" href="./css/responsive.css" />
+        <script
+            src="https://kit.fontawesome.com/738d765bd3.js"
+            crossorigin="anonymous"
+        ></script>
+        <title>Snap</title>
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="header-logo" unselectable="on">snap</h1>
+            <span class="header-span">
+                <button id="header-btn-menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </span>
+            <nav class="header-menu" style="display: none">
+                <button id="header-btn-menu-collapse">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+                <ul class="navigation">
+                    <li id="linkFeatures">
+                        <a class="efeito-li" id="aFeatures" href="#"
+                            >Features
+                            <img
+                                src="./images/icon-arrow-down.svg"
+                                alt="icon-arrow-down"
+                        /></a>
+                        <ul class="menu-features" style="display: none">
+                            <li>
+                                <a href="#"
+                                    ><img
+                                        src="./images/icon-todo.svg"
+                                        alt="icon-todo"
+                                    />
+                                    Todo List</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><img
+                                        src="./images/icon-calendar.svg"
+                                        alt="icon-calendar"
+                                    />
+                                    Calendars</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><img
+                                        src="./images/icon-reminders.svg"
+                                        alt="icon-reminders"
+                                    />
+                                    Reminders</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><img
+                                        src="./images/icon-planning.svg"
+                                        alt="icon-planning"
+                                    />
+                                    Planning</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li id="linkCompany">
+                        <a class="efeito-li" id="aCompany" href="#"
+                            >Company
+                            <img
+                                src="./images/icon-arrow-down.svg"
+                                alt="icon-arrow-down"
+                        /></a>
+                        <ul class="menu-company" style="display: none">
+                            <li><a href="#">History</a></li>
+                            <li><a href="#">Our Team</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a class="efeito-li" href="#">Careers</a></li>
+                    <li><a class="efeito-li" href="#">About</a></li>
+                </ul>
+
+                <ul class="login">
+                    <li class="li-login">
+                        <a class="efeito-li" id="login-login" href="#">Login</a>
+                    </li>
+                    <li class="li-register">
+                        <a class="efeito-li" id="login-register" href="#"
+                            >Register</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="main-image">
+                <img src="./images/image-hero-mobile.png" alt="laptop" />
+            </div>
+            <section class="hero-text">
+                <h1>Make remote work</h1>
+                <p>
+                    Get your team in sync, no matter your location. Streamline
+                    processes, create team rituals, and watch productivity soar.
+                </p>
+                <a href="#">Learn more</a>
+            </section>
+            <footer>
+                <ul>
+                    <li>
+                        <a href="#"
+                            ><img
+                                src="./images/client-databiz.svg"
+                                alt="client-databiz"
+                        /></a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            ><img
+                                src="./images/client-audiophile.svg"
+                                alt="client-audiophile"
+                        /></a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            ><img
+                                src="./images/client-meet.svg"
+                                alt="client-meet"
+                        /></a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            ><img
+                                src="./images/client-maker.svg"
+                                alt="client-maker"
+                        /></a>
+                    </li>
+                </ul>
+            </footer>
+        </main>
+
+        <script src="./JS/script.js"></script>
+        <script src="./JS/responsive.js"></script>
+    </body>
+</html>

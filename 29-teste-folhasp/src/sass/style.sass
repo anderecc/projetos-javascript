@@ -1,0 +1,386 @@
+@import 'variables'
+@import 'utilities'
+
+@include reset-all
+
+body
+    font-family: 'Helvetica'
+    width: 100%
+
+.header
+    width: 100%
+    position: relative
+    background-color: $primary-color
+    .header-container
+        padding-top: 20px
+        display: flex
+        align-items: center
+        justify-content: space-around
+        .header-icon-menu
+            @include mobile
+                width: 30%
+                padding: 20px
+            margin: 10px
+            cursor: pointer
+
+        .header-logo
+            @include mobile
+                width: 70%
+                display: flex
+                align-items: flex-end
+        .header-text, .header-nav-socials
+            @include mobile
+                display: none
+        .header-text
+            color: white
+            font-size: .9rem
+            padding: 0 5px
+        .header-nav-socials
+            ul
+                display: flex
+                li
+                    margin-right: 10px
+                    .header-facebook, .header-twitter
+                        @include tablet
+                            width: 30px
+                            height: 30px
+                        padding: 10px 15px
+                        height: 30px
+                        text-decoration: none
+                        background-color: white
+                        box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3)
+                        @include flex-center
+                        border-radius: 3px
+                    .header-facebook
+                        &::after
+                            content: 'Curtir'
+                            color: #172874
+                            @include links-header-style
+                    .header-twitter
+                        &::after
+                            content: 'Seguir'
+                            color: #5194d3
+                            @include links-header-style
+                        .fa-facebook-f
+                            color: #172874
+                        .fa-twitter
+                            color: #5194d3
+
+    .header-nav
+        max-height: 0px
+        overflow: hidden
+        width: 100%
+        text-align: center
+        background-color: rgba(0, 0, 0, .4)
+        ul
+            li
+                &:nth-child(-n+2)
+                    border-bottom: solid 1px rgba(0, 0, 0, .5)
+                &:hover
+                    background-color: rgba(0, 0, 0, .2)
+                a
+                    display: block
+                    padding: 10px 15px
+                    color: white
+                    text-decoration: none
+                    transition: all .3s
+                    &:hover
+                        letter-spacing: 1px
+
+.main
+    @include mobile
+        display: block
+    @include tablet
+        padding: 0 20px
+    padding: 0 8%
+    margin: auto
+    width: 100%
+    display: grid
+    grid-gap: 20px
+    grid-template-columns: 1fr 1fr 1fr
+
+.main-carousel
+    @include tablet
+        grid-column: 1 / 3
+    grid-column: 1 / 4
+    grid-row: 1 / 2
+    width: 100%
+    @include tablet
+        height: 80vh
+    height: 90vh
+    padding: 50px 0
+
+    @extend %buttons-carousel-desktop
+    .slideshow
+        display: block
+        position: relative
+        width: 100%
+        height: 90%
+        list-style: none
+        .show
+            z-index: 10
+            .carousel-image
+                background-image: url("../../slices/desktop/image_rotate.png")
+                background-repeat: no-repeat
+                background-size: cover
+                @include tablet
+                    background-image: url("../../slices/tablet/image_rotate.png")
+                @include mobile
+                    height: 70%
+                    background-image: url("../../slices/mobile/image_rotate.png")
+                top: 0
+                left: 0
+                width: 100%
+                height: 90%
+                position: absolute
+            figcaption
+                @include tablet
+                    width: 45%
+                width: 35%
+                font-size: .9rem
+                position: absolute
+                z-index: 10
+                color: white
+                bottom: 35%
+                left: 3%
+                padding: 10px
+                background-color: $primary-color
+                font-weight: bold
+                text-transform: uppercase
+        h3
+            @include mobile
+                bottom: 0
+                left: 0
+                color: $text-color
+            left: 3%
+            bottom: 10%
+            position: absolute
+            z-index: 10
+            color: white
+            font-size: 1.5rem
+            padding: 15px 0
+            span
+                @include mobile
+                    display: none
+    .main-carousel-icon
+        @include flex-center
+        margin-bottom: 20px
+        div
+            cursor: pointer
+            @include mobile
+                margin: 0 10px
+            width: 15px
+            height: 15px
+            border-radius: 50%
+            margin: 0 5px
+            background-color: #636262a8
+        .active
+            background-color: $primary-color
+
+.main-highlight
+    @include mobile
+        display: block
+    @include tablet
+        flex-direction: row
+        grid-column: 1 / 3
+    overflow: hidden
+    width: 100%
+    font-size: .8rem
+    grid-column: 1 / 4
+    grid-row: 2 / 3
+
+    .highlight-title
+        @include tablet
+            display: none
+        @include titles-cacildis-divoltis
+    div
+        @include mobile
+            display: block
+        display: flex
+        column-gap: 20px
+        .main-highlight-container
+            display: block
+            width: 100%
+            margin: 20px auto
+            position: relative
+
+            img
+                height: 100%
+                width: 100%
+                vertical-align: top
+            .highlight-caption
+                padding: 5px 10px
+                text-transform: uppercase
+                background-color: #e74d3cbb
+                position: absolute
+                color: white
+                z-index: 1
+                bottom: 15%
+                left: 0
+
+.main-divoltis
+    @include mobile
+        display: block
+    @include tablet
+        grid-column: 1 / 4
+    grid-column: 1 / 3
+    grid-row: 3 / 4
+
+    width: 100%
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: 1fr repeat(2, 5fr)
+    column-gap: 20px
+    .divoltis-title
+        grid-column: 1 / 3
+        grid-row: 1 / 2
+        @include titles-cacildis-divoltis
+    .divoltis-container
+        width: 100%
+        margin: 20px 0
+        border-bottom: 1px solid #86828283
+        padding: 20px 0
+
+        img
+            width: 100%
+        .divoltis-name
+            text-transform: uppercase
+            color: $title-blue
+            font-weight: normal
+            padding: 5px 0
+        h2
+            @include mobile
+                font-size: 1.3rem
+            @include tablet
+                font-size: 1.1rem
+            font-size: .9rem
+            font-weight: normal
+            color: $text-color
+            padding: 5px 0
+
+.main-paisis
+    @include mobile
+        width: 100%
+    @include tablet
+        grid-column: 1 / 2
+        grid-row: 4 / 5
+
+    .title-paisis
+        font-size: 1.5rem
+        color: $title-blue
+        font-weight: 500
+        padding: 20px 0 0
+    h4
+        @include mobile
+        font-size: 1.2rem
+
+        padding: 20px 0
+        color: $text-color
+        font-size: .9rem
+        font-weight: 600
+        &:nth-child(-n+5)
+            border-bottom: 1px solid #86828288
+
+.main-pirulita
+    @include tablet
+        grid-column: 2 / 3
+        grid-row: 4 / 5
+.main-cevadiss
+    @include tablet
+        grid-column: 1 / 2
+        grid-row: 5 / 6
+
+.main-pirulita,  .main-cevadiss
+    @include mobile
+        width: 100%
+
+    h2
+        color: $title-orange
+        font-size: 1.9rem
+        font-weight: normal
+    .pirulita-container, .cevadiss-container
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-rows: 1fr 3fr
+        margin: 20px 0
+        column-gap: 20px
+        a
+            grid-column: 1 / 2
+            grid-row: 1 / 3
+
+            img
+                @include mobile
+                    width: 100%
+                    height: 100%
+                height: 100%
+        .pirulita-title, .cevadiss-title
+            padding-top: 10px
+            color: $title-orange
+            font-weight: 600
+            text-transform: uppercase
+        p
+            @include tablet
+                font-size: .9rem
+            font-size: 1rem
+            color: $text-color
+            font-weight: 600
+
+.publicity
+    margin: auto
+    @include mobile
+        padding: 70px 30px
+    @include tablet
+        grid-column: 2 / 3
+        grid-row: 5 / 6
+    grid-column: 3 / 4
+    grid-row: 3 / 4
+    width: 100%
+    text-align: right
+    font-size: .8rem
+    color: $text-color
+    img
+        @include tablet
+            width: 100%
+        width: 80%
+
+.footer
+    width: 100%
+    background-color: $text-color
+    margin-top: 10%
+    .back-top
+        @include mobile
+            padding: 15px
+            font-size: 1.3rem
+        padding: 0
+        color: white
+        text-transform: uppercase
+        background-color: $primary-color
+        text-align: right
+        align-items: center
+        display: flex
+        justify-content: right
+        .p-back-top
+            cursor: pointer
+    .footer-container
+        @include tablet
+            padding: 10px
+        @include mobile
+            display: block
+        padding: 0 1% 0 8%
+        display: flex
+        align-items: center
+        justify-content: space-around
+    .footer-logo
+        @include mobile
+            display: none
+        font-size: 2.5rem
+    p
+        @include mobile
+            font-size: 1rem
+        font-size: .8rem
+        color: white
+        padding: 15px 10px
+        letter-spacing: 1px
+        a
+            text-decoration: underline
+            color: white

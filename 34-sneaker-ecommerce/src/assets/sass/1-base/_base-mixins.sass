@@ -1,0 +1,33 @@
+@use '../1-base/variables'
+
+@mixin mobile
+    @media (max-width: 619px)
+        @content
+@mixin desktop
+    @media (min-width: 620px)
+        @content
+
+@mixin flex-center
+    display: flex
+    align-items: center
+
+@mixin logo
+    font-weight: bolder
+    font-size: 2rem
+    color: variables.$dark-blue
+    @include flex-center
+    cursor: pointer
+    user-select: none
+
+@mixin btns-carousel
+    position: absolute
+    z-index: 5
+    top: calc( 50% - 25px )
+    border-radius: 50%
+    img
+        width: 30%
+
+@mixin btns-carousel-width
+    display: flex
+    width: 30px
+    height: 30px

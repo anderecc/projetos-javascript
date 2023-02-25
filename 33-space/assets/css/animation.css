@@ -1,0 +1,39 @@
+@keyframes openMenu {
+    0%{
+        transform: translatey(-110%);
+    }
+    100%{
+        transform: translatey(0);
+    }
+    
+}
+
+@keyframes rotateIcon {
+    0%{
+        transform: rotate(-90deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+    
+}
+
+@keyframes opaciting {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+
+    }
+}
+
+@keyframes bottomRight {
+    0%{
+        transform: translateX(1000%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+

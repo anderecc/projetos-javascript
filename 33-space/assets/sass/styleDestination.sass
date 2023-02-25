@@ -1,0 +1,211 @@
+$colorLetters:#e0d8d8de
+    
+    
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    position: relative
+    width: 100%
+    height: 100vh
+    background-image: url("../destination/background-destination-mobile.jpg") 
+    background-repeat: no-repeat
+    background-size: cover
+
+.main
+    display: flex
+    flex-direction: column
+    align-items: center
+    .main-uper
+        text-transform: uppercase
+        font-family: 'Cinzel', serif
+        color: white
+        font-weight: normal 
+        
+    .img-icon
+        width: 100%
+        padding: 10px 50px
+        display: flex
+        align-items: center
+        justify-content: center
+        img
+            width: 60%
+            animation-name: opaciting
+            animation-duration: .8s
+            animation-fill-mode: forwards
+            animation-iteration-count: 1
+
+    nav        
+        width: 100%
+        margin: 10px 0
+        ul
+            display: flex
+            justify-content: space-evenly
+            li
+                list-style: none
+                position: relative
+                a
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    text-decoration: none
+                    text-transform: uppercase
+                    color: $colorLetters
+                    cursor: pointer
+                    font-family: 'Barlow Condensed', sans-serif
+                    font-size: 1.2em
+                    padding: 5px 15px
+                    &:hover
+                        transform: translateY(-1px)
+                        transition: all .3s
+                        color: white
+
+.main-section
+    text-align: center
+    padding: 0 15px
+    color: $colorLetters
+    animation-name: opaciting
+    animation-duration: .8s
+    animation-fill-mode: forwards
+    animation-iteration-count: 1
+
+    h2
+        text-transform: uppercase
+        padding-bottom:10px    
+        font-size: 2.5em
+        color: white
+        font-family: 'Cinzel', serif
+    > p
+        font-family: 'Barlow Condensed', sans-serif
+        color: $colorLetters
+        font-size: 1.1em
+        letter-spacing: 1px
+        word-spacing: 2px
+        line-height: 1.3
+    hr
+        margin: 15px 0
+    .main-info
+        font-size: 1.2em
+        font-family: 'Barlow Condensed', sans-serif
+        color: $colorLetters
+        letter-spacing: 1px
+        word-spacing: 2px
+
+
+.main-menu
+    padding-top:82px
+
+.link-ativo
+    &::before
+        content: ''
+        width: 50%
+        position: absolute
+        border-bottom: 2px solid white
+        bottom: 0
+        animation-name: opaciting
+        animation-duration: 1s
+        animation-fill-mode: forwards
+        animation-iteration-count: 1
+
+$layout-breakpoint-tablet: 481px
+$layout-breakpoint-desktop: 720px
+
+
+@media (min-width: $layout-breakpoint-tablet)
+    body
+        background-image: url("../destination/background-destination-tablet.jpg")
+
+    .main
+        display: flex
+        flex-direction: column
+        align-items: center
+        .main-uper
+            text-transform: uppercase
+            font-family: 'Cinzel', serif
+            color: white
+            font-weight: normal
+            font-size: .9em
+        .main-title
+            align-self: flex-start
+            padding-left: 20px
+        .img-icon
+            img 
+                width: 40%
+        nav        
+            ul
+                justify-content: center
+                li
+                    a
+                        font-size: 1em
+                        padding: 5px 10px
+                        &:hover
+                            transform: translateY(-1px)
+                            transition: all .3s
+                            color: white
+.main-section
+    h2
+        font-size: 2em
+    > p
+        font-size: 1em
+    hr
+        margin: 15px 0
+    .main-info
+        font-size: 1em
+
+
+
+@media (min-width: $layout-breakpoint-desktop)
+    body
+        background-image: url("../destination/background-destination-desktop.jpg")
+    .main
+        display: grid
+        grid-row-gap: 20px
+        padding: 10px 30px
+        .main-title
+            grid-column: 1 / -1
+            grid-row: 1 / 2
+            font-size: 1.5em
+            padding-left: 80px
+        .img-icon
+            height: 100%
+            grid-column: 1 / 2
+            grid-row: 2 / 4
+            img
+                width: 80%
+        nav
+            grid-column: 2 / 3
+            grid-row: 2 / 3      
+            ul
+                justify-content: center
+                li
+                    a
+                        font-size: 1em
+                        padding: 5px 10px
+                        &:hover
+                            transform: translateY(-1px)
+                            transition: all .3s
+                            color: white
+    .main-section
+        grid-column: 2 / 3
+        grid-row: 3 / 4
+        text-align: left
+        h2
+            font-size: 3em
+        > p
+            font-size: 1em
+        .div-main-info
+            display: flex
+            justify-content: flex-start
+            .main-info
+                margin-right: 20%
+                font-size: 1.1em
+                display: flex
+                flex-direction: column
+    strong
+        text-transform: uppercase
+        font-size: 1.3em
+
+
+

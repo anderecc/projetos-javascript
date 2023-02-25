@@ -1,0 +1,57 @@
+@mixin reset-all
+    *
+        margin: 0
+        padding: 0
+        box-sizing: border-box
+        list-style: none
+
+@mixin flex-center
+    display: flex
+    align-items: center
+    justify-content: center
+
+@mixin links-header-style
+    font-variant: small-caps
+    font-size: .8rem
+    margin-left: 15%
+    text-transform: lowercase
+    @include tablet
+        content: ''
+
+@mixin titles-cacildis-divoltis
+    font-weight: normal
+    color: $text-color
+    font-size: 1.8rem
+
+@mixin mobile
+    @media (max-width: 480px)
+        @content
+@mixin tablet
+    @media (max-width: 768px)
+        @content
+
+@mixin style-button-carousel
+    z-index: 10
+    width: 40px
+    height: 40px
+    background-color: white
+    border-radius: 50%
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, .5)
+    position: absolute
+    @include flex-center
+    top: calc( 50% - 45px )
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: 40%
+    border: none
+    cursor: pointer
+
+%buttons-carousel-desktop
+    @media (min-width: 769px)
+        .slideshow
+            .prev
+                left: calc( -45px / 2 )
+                @include style-button-carousel
+            .next
+                right: calc( -45px / 2 )
+                @include style-button-carousel

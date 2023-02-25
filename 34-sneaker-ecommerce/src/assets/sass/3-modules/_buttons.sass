@@ -1,0 +1,50 @@
+@use '../1-base/variables'
+@use '../1-base/base-mixins'
+
+.btn
+    background-color: variables.$light-grayish-blue
+    border: none
+    outline: none
+    width: 50px
+    height: 50px
+    @include base-mixins.flex-center
+    justify-content: center
+    cursor: pointer
+    transition: transform .3s, box-shadow .3s
+
+    &:active
+        transform: scale(.95)
+    &:hover
+        animation: shake .3s linear 1
+
+    &-basket
+        position: relative
+        #cart-qty
+            color: variables.$light-grayish-blue
+            font-size: .8rem
+            background-color: variables.$primary-color
+            width: 15px
+            height: 15px
+            border-radius: 50%
+            justify-content: center
+            position: absolute
+            right: 15%
+            top: 15%
+            @include base-mixins.flex-center
+
+    &-orange
+        width: 100%
+        border-radius: 5px
+        background-color: variables.$primary-color
+        color: variables.$white
+        font-weight: 700
+        column-gap: 5%
+        margin: 1rem 0
+
+@keyframes shake
+    0%
+        transform: translateX(0px)
+    50%
+        transform: translateX(1px)
+    100%
+        transform: translateX(0px)

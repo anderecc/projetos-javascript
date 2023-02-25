@@ -1,0 +1,194 @@
+$colorLetters:#e0d8d8de
+    
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+
+.header-menu
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 10px 20px
+    .header-logo
+        width: 80%
+        padding: 10px 0
+    .header-btn
+        background-color: transparent
+        border: none
+        cursor: pointer
+        animation-name: rotateIcon
+        animation-duration: .5s
+        animation-iteration-count: 1
+        animation-fill-mode: forwards
+    .header-btn-close, .header-nav
+        display: none
+
+.header-menu-aberto
+    position: absolute
+    flex-direction: column
+    z-index: 10
+    background: rgba(255, 255, 255, 0.15)
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)
+    backdrop-filter: blur(5.1px)
+    -webkit-backdrop-filter: blur(5.1px)    
+    transform: translateY(-110%)
+    animation-name: openMenu
+    animation-duration: .5s
+    animation-iteration-count: 1
+    animation-fill-mode: forwards
+
+    span, .header-btn-open
+        display: none
+
+    .header-btn-close, .header-nav
+        display: flex
+
+    .header-btn-close
+            align-self: flex-end
+            margin:  5% 0 0 0  
+            animation-delay: .2s
+
+    .header-nav
+        width: 100%
+        .number
+            display: flex
+            padding-right: 10px
+        ul
+            list-style: none
+            width: 100%
+            li
+                overflow: hidden
+                .home-links
+                    position: relative
+                    display: flex
+                    align-items: center
+                    padding: 15px
+                    font-size: 1.3em
+                    text-decoration: none
+                    color: $colorLetters
+                    &::before
+                            background-color: white
+                            bottom: 0   
+                            content: "" 
+                            display: block  
+                            height: 2px 
+                            left: 0 
+                            left: auto  
+                            position: absolute  
+                            -webkit-transform: scaleX(0)    
+                            transform: scaleX(0)    
+                            -webkit-transform-origin: right top 
+                            transform-origin: right top 
+                            transition: color .1s,-webkit-transform .2s ease-out    
+                            transition: color .1s,transform .2s ease-out    
+                            transition: color .1s,transform .2s ease-out,-webkit-transform .2s ease-out 
+                            width: 10% 
+
+                    &:hover
+                        color: white
+                        &::before
+                            -webkit-transform: scale(1)
+                            transform: scale(1)
+                            -webkit-transform-origin: left top
+                            transform-origin: left top
+                    &:focus
+                        color: white
+                        &::before                        
+                            -webkit-transform: scale(1)
+                            transform: scale(1)
+                            -webkit-transform-origin: left top
+                            transform-origin: left top
+
+$layout-breakpoint-tablet: 481px
+$layout-breakpoint-desktop: 720px
+
+@media (min-width: $layout-breakpoint-tablet)
+    .header-menu
+        padding: 0
+        height: 60px
+        margin-bottom: 20px
+        .header-logo
+            width: 80%
+            padding: 10px 0 10px 20px
+        .header-btn
+            display: none
+        .header-nav
+            display: flex
+            z-index: 10
+            background: rgba(255, 255, 255, 0.1)
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)
+            backdrop-filter: blur(1.5px)
+            -webkit-backdrop-filter: blur(1.5px)          
+            width: 60%
+            height: 100%
+            .number
+                display: none
+            ul
+                list-style: none
+                display: flex
+                align-items: center
+                justify-content: space-around
+                width: 100%
+                .link-ativo-menu
+                    border-bottom: solid white 2px
+                    height: 100%
+                .header-links
+                    display: flex
+                    overflow: hidden
+                    align-items: center
+                    justify-content: center
+                    height: 100%
+                    .home-links
+                        text-transform: uppercase
+                        padding: 15px 0 15px 0 
+                        position: relative
+                        display: flex
+                        align-items: center
+                        font-size: .8em
+                        text-decoration: none
+                        color: $colorLetters
+                        &:hover
+                            color: white
+                        &:focus
+                            color: white
+
+@media (min-width: $layout-breakpoint-desktop)
+    .header-menu
+        margin-top: 30px
+        .header-nav
+            width: 60%
+            &::before
+                content: ''
+                height: 2px
+                width: 40%
+                border-bottom: 1px solid #cfc9c9
+                position: absolute
+                top: calc( 50% - 2px )
+                transform: translateX(-95%)
+            .number
+                display: block
+                margin-right: 10px
+                font-weight: bolder
+                color: white
+            ul
+                justify-content: center
+                .header-links
+                    margin: 0 10px
+                    .home-links
+                        font-weight: lighter
+                        color: #cfc9c9
+
+
+
+
+
+
+
+
+
+
+
+
