@@ -17,6 +17,14 @@ let options = {
     },
 };
 
+(() => {
+    computeConverter(
+        $currencyFirst.value,
+        $currencySecond.value,
+        $worthFirst.value
+    );
+})();
+
 $currencyFirst.addEventListener('change', () => {
     computeConverter(
         $currencyFirst.value,
@@ -39,11 +47,11 @@ $worthFirst.addEventListener('keyup', () => {
         $worthFirst.value
     );
 });
-$worthFirst.addEventListener('change', () => {
+$worthSecond.addEventListener('change', () => {
     computeConverter(
         $currencyFirst.value,
         $currencySecond.value,
-        $worthFirst.value
+        $worthSecond.value
     );
 });
 
