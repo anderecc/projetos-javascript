@@ -16,18 +16,21 @@ body
     flex-direction: column
     align-items: left
     justify-content: space-evenly
-    padding: 20px 40px
+    padding: 1rem
     box-sizing: border-box
-    width: 500px
+    min-width: 30%
     height: 300px
     background-color: #231b42
     border-radius: 10px
+    @media (max-width: 720px)
+        min-width: 100%
 
 .label
     font-size: 1.3rem
     display: flex
     align-items: center
     justify-content: space-between
+    flex-wrap: wrap
 
 .title
     text-align: center

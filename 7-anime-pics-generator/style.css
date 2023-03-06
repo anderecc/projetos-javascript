@@ -11,13 +11,17 @@ body {
   width: 80%;
   height: 60%;
   display: flex;
-  justify-content: center;
+  justify-content: center !important;
   align-items: center;
   text-align: center;
   flex-direction: column;
   border-radius: 10px;
+  row-gap: 1rem;
   box-shadow: 5px 5px 8px black;
   background-color: rgba(255, 255, 255, 0.2); }
+  @media (max-width: 720px) {
+    .container {
+      width: 100%; } }
 
 .anime-image, .loading-container {
   width: 300px;
@@ -47,7 +51,7 @@ body {
   padding: 10px 5px; }
 
 .title {
-  font-size: 2.7rem; }
+  margin: 0; }
 
 .loading {
   animation: loading 1s infinite linear;
@@ -63,6 +67,13 @@ body {
     display: none;
     font-size: 5rem;
     color: darkgreen; }
+
+.anime-container, .info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 1rem; }
 
 .anime-container {
   display: none; }

@@ -5,8 +5,11 @@ html {
   background: linear-gradient(45deg,  #42a5f5 0%,#478ed1 50%,#0d47a1 100%);
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
 }
 
 body {
@@ -31,6 +34,7 @@ body {
 
 .timer__controls {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .timer__controls > * {
