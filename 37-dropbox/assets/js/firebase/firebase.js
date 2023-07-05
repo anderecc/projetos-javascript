@@ -1,5 +1,4 @@
 import { currentFolder } from '../main.js';
-import { process } from '../../../env.js';
 
 /* eslint-disable no-undef */
 const firebaseConfig = {
