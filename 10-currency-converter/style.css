@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: linear-gradient(to left bottom, yellow, darkorange);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Courier New", Courier, monospace; }
+
+.container {
+  max-width: 40%;
+  padding: 5%;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 8px black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column; }
+  @media (max-width: 720px) {
+    .container {
+      max-width: 100%; } }
+
+.title {
+  margin: 10px 0;
+  text-align: center; }
+
+.currency-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  flex-wrap: wrap; }
+  .currency-container select, .currency-container input {
+    margin: 10px;
+    padding: 5px;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 5px; }
+  .currency-container select {
+    cursor: pointer; }
+  .currency-container input {
+    text-align: center; }
+
+.exchange-rate {
+  margin-top: 20px;
+  font-size: 1.6rem;
+  text-align: center; }
+
+.loading {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15rem;
+  color: darkorange; }
+  .loading i {
+    animation: loading 2s infinite linear; }
+
+@keyframes loading {
+  from {
+    transform: rotate(0); }
+  to {
+    transform: rotate(360deg); } }
+
+/*# sourceMappingURL=style.css.map */

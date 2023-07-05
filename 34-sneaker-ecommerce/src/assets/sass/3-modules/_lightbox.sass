@@ -1,0 +1,62 @@
+@use '../1-base/variables'
+@use '../1-base/base-mixins'
+@use 'modules-mixins'
+
+.lightbox
+    @include base-mixins.mobile
+        display: none
+    &-container
+        display: none
+        position: fixed
+        z-index: 15
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: variables.$black
+        flex-direction: column
+        justify-content: space-around
+        .lightbox-overflow
+            width: 30%
+            height: 65%
+            margin: 0 auto
+            position: relative
+            overflow: hidden
+            border-radius: 10px
+            .lightbox-carousel
+                display: flex
+                width: 100%
+                height: 100%
+                transition: .8s
+                img
+                    width: 100%
+                    height: 100%
+
+        .lightbox-preview
+            width: 100%
+            height: 20vh
+            @include base-mixins.flex-center
+            justify-content: center
+            img
+                width: 5%
+                border-radius: 10px
+                margin: 0 1rem
+                cursor: pointer
+                &:hover
+                    filter: blur(1px)
+        .btn
+            @include base-mixins.btns-carousel-width
+            &-close-lightbox
+                background-color: transparent
+                position: absolute
+                top: 5%
+                right: 25%
+            &-prev, &-next
+                @include base-mixins.btns-carousel
+            &-prev
+                left: 2%
+            &-next
+                right: 2%
+        .img-selected
+            box-shadow: 0 0 1px 3px variables.$primary-color
+            filter: blur(1px)

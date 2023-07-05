@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Css -->
+  <link rel="stylesheet" href="./assets/css/app.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  
+  <title>E-commerce product page</title>
+
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-menu">
+      <div>
+        <button class="btn btn-open-menu"><img class="btn-open-menu" src="../src/assets/images/icon-menu.svg" alt="icon-menu"></button>
+        <p class="header-logo">sneakers</p>
+      </div>
+      <div>
+        <button class="btn btn-basket"><img class="btn-basket" src="../src/assets/images/icon-cart.svg" alt="icon-cart"><span class="btn-basket" id="cart-qty">3</span></button>
+        <div class="header-profile-img"><img src="../src/assets/images/image-avatar.png" alt="image-avatar"></div>
+      </div>
+      <div class="header-nav">
+        <nav class="header-nav-container">
+          <button class="btn btn-close-menu"><img class="btn-close-menu" src="../src/assets/images/icon-close.svg" alt="icon-close"></button>
+          <ul>
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!-- Cart -->
+  <section class="basket">
+    <p class="basket-info">Cart</p>
+    <hr>
+    <ul class="basket-product">
+      <li>
+        <img src="../src/assets/images/image-product-1-thumbnail.jpg" alt="">
+        <div>
+          <p class="product-name">Fall Limited Edition...</p>
+          <p class="product-price">$125,00 <span>x 3</span> <span class="total">$375,00</span></p>
+        </div>
+      </li>
+      <li>
+        <img src="../src/assets/images/image-product-1-thumbnail.jpg" alt="">
+        <div>
+          <p class="product-name">Fall Limited Edition...</p>
+          <p class="product-price">$125,00 <span>x 3</span> <span class="total">$375,00</span></p>
+        </div>
+      </li>
+    </ul>
+    <button class="btn btn-orange">Checkout</button>
+  </section>
+  <!-- LightBox -->
+  <section class="lightbox">
+    <div class="lightbox-container">
+        <button class="btn btn-close-lightbox"><svg class="btn-close-lightbox" width="14" height="15" xmlns="http://www.w3.org/2000/svg"><path class="btn-close-lightbox" d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#ff7d1a" fill-rule="evenodd"/></svg></button>
+      <div class="lightbox-overflow">
+        <div class="lightbox-carousel">
+          <img src="../src/assets/images/image-product-1.jpg" alt="image-product-1">
+          <img src="../src/assets/images/image-product-2.jpg" alt="image-product-2">
+          <img src="../src/assets/images/image-product-3.jpg" alt="image-product-3">
+          <img src="../src/assets/images/image-product-4.jpg" alt="image-product-4">
+        </div>
+        <button class="btn btn-prev btnPrevLightbox"><img class="btnPrevLightbox" src="../src/assets/images/icon-previous.svg" alt="icon-previous"></button>
+        <button class="btn btn-next btnNextLightbox"><img class="btnNextLightbox" src="../src/assets/images/icon-next.svg" alt="icon-next"></button>
+      </div>
+      
+      <div class="lightbox-preview">
+        <img class="img-selected" src="../src/assets/images/image-product-1.jpg" data-carousellightbox="1" alt="image-product-1">
+        <img src="../src/assets/images/image-product-2.jpg" data-carousellightbox="2" alt="image-product-2">
+        <img src="../src/assets/images/image-product-3.jpg" data-carousellightbox="3" alt="image-product-3">
+        <img src="../src/assets/images/image-product-4.jpg" data-carousellightbox="4" alt="image-product-4">
+      </div>
+    </div>
+  </section>
+  <!-- Carousel Images -->
+  <section class="carousel">
+    <div class="carousel-overflow">
+      <div class="carousel-container">
+        <img src="../src/assets/images/image-product-1.jpg" data-imglightbox="imglightbox" alt="image-product-1">
+        <img src="../src/assets/images/image-product-2.jpg" data-imglightbox="imglightbox" alt="image-product-2">
+        <img src="../src/assets/images/image-product-3.jpg" data-imglightbox="imglightbox" alt="image-product-3">
+        <img src="../src/assets/images/image-product-4.jpg" data-imglightbox="imglightbox" alt="image-product-4">
+      </div>
+    </div>
+    <button class="btn btn-prev btnPrev"><img class="btnPrev" src="../src/assets/images/icon-previous.svg" alt="icon-previous"></button>
+    <button class="btn btn-next btnNext"><img class="btnNext" src="../src/assets/images/icon-next.svg" alt="icon-next"></button>
+
+      <div class="carousel-preview">
+        <img class="img-selected" src="../src/assets/images/image-product-1.jpg" data-carousel="1" alt="image-product-1">
+        <img src="../src/assets/images/image-product-2.jpg" data-carousel="2" alt="image-product-2">
+        <img src="../src/assets/images/image-product-3.jpg" data-carousel="3" alt="image-product-3">
+        <img src="../src/assets/images/image-product-4.jpg" data-carousel="4" alt="image-product-4">
+      </div>
+  </section>
+  <!-- Product layout -->
+  <main class="main">
+    
+    <p class="brand-name">Sneaker Company</p>
+    <div class="product-info">
+      <h2>Fall Limited Edition Sneakers</h2>
+      <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
+        durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+    </div>
+    <div class="product-price-container">
+      <p class="product-new-price">$125.00 <span>50%</span></p>
+      <p class="product-price">$250,00</p>
+    </div>
+    <div class="product-select">
+        <div class="input-qty">
+        <button class="btn btn-minus"><img class="btn-minus" src="../src/assets/images/icon-minus.svg" alt="icon-minus"></button>
+        <input class="input-value" type="number" value="1" min="0" max="5">
+        <button class="btn btn-plus" ><img class="btn-plus" src="../src/assets/images/icon-plus.svg" alt="icon-plus"></button>
+      </div>
+      <button class="btn btn-orange"><svg width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#fff" fill-rule="nonzero"/></svg>Add to cart</button>
+    </div>
+  </main>
+  <footer class="footer">
+    <p class="footer-logo">sneakers</p>
+    <p>&copy; copyright 2022 all rights reserved</p>
+    <nav class="footer-nav">
+      <ul>
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    </nav>
+  </footer>
+  <script src="./assets/js/bundle.js"></script>
+</body>
+</html>

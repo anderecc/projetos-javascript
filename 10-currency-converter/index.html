@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+            integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <title>Currency Converter</title>
+    </head>
+    <body>
+        <div class="loading" style="display: none">
+            <i class="fa-solid fa-spinner"></i>
+        </div>
+        <div class="container">
+            <h1 class="title">Currency Converter</h1>
+            <div class="currency-container">
+                <select id="currency-first">
+                    <option value="AUD">AUD</option>
+                    <option value="CAD">CAD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                    <option value="INR">INR</option>
+                    <option value="JPY">JPY</option>
+                    <option value="BRL" selected>BRL</option>
+                    <option value="USD">USD</option>
+                </select>
+                <input type="number" id="worth-first" value="1" min="0" />
+            </div>
+            <div class="currency-container">
+                <select id="currency-second">
+                    <option value="AUD">AUD</option>
+                    <option value="CAD">CAD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                    <option value="INR">INR</option>
+                    <option value="JPY">JPY</option>
+                    <option value="BRL">BRL</option>
+                    <option value="USD" selected>USD</option>
+                </select>
+                <input
+                    type="number"
+                    id="worth-second"
+                    value="1"
+                    min="0"
+                    disabled
+                />
+            </div>
+            <p class="exchange-rate" id="exchange-rate">Change a value</p>
+        </div>
+        <script src="./index.js"></script>
+    </body>
+</html>

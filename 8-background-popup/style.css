@@ -1,0 +1,93 @@
+body {
+  margin: 0; }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1674569894883-5afe52e070b8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  background-size: cover; }
+  .container h1 {
+    color: white;
+    font-family: sans-serif;
+    font-size: 3em;
+    text-align: center; }
+  .container .btn {
+    background-color: #dfa112;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s; }
+    .container .btn:hover {
+      background-color: #bf9533; }
+
+.active.container {
+  filter: blur(5px) brightness(0.7); }
+
+.popup-container {
+  position: fixed;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%);
+  width: 40%;
+  height: 200px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-image: url("https://images.unsplash.com/photo-1674718038701-9e69f7f5e1c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  background-size: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px;
+  opacity: 1;
+  transition: all 0.6s; }
+  .popup-container h4 {
+    font-family: sans-serif;
+    margin: 10px 0;
+    color: orangered;
+    font-size: 2em; }
+  .popup-container label {
+    color: orangered;
+    font-family: sans-serif; }
+  .popup-container .popup-btn {
+    background-color: lightgreen;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: transform 0.3s; }
+    .popup-container .popup-btn:hover {
+      transform: scale(0.98); }
+  .popup-container .input {
+    border: 2px solid;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center; }
+    .popup-container .input::placeholder {
+      color: lightgray; }
+  .popup-container .close-icon {
+    transition: color 0.3s;
+    position: absolute;
+    right: 20px;
+    color: white;
+    cursor: pointer; }
+    .popup-container .close-icon:hover {
+      color: orange; }
+  @media (max-width: 720px) {
+    .popup-container {
+      width: 80%; } }
+
+.active.popup-container {
+  visibility: hidden;
+  opacity: 0;
+  top: 10%; }
+
+/*# sourceMappingURL=style.css.map */

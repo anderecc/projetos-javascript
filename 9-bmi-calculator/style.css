@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to left, pink, lightblue);
+  font-family: monospace; }
+
+.container {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 5px 8px black; }
+
+.bmi-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%; }
+
+.bmi-content {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%; }
+  .bmi-content label {
+    font-size: 1.1rem;
+    font-weight: 100;
+    margin-bottom: 3px; }
+
+.input {
+  border-radius: 5px;
+  border: 2px solid transparent;
+  padding: 10px;
+  font-weight: 400;
+  font-size: 1.2rem;
+  outline: none;
+  margin: 5px 0; }
+  .input:focus {
+    border-color: lightgreen; }
+  .input::placeholder {
+    font-size: 0.8rem; }
+
+.btn {
+  border: none;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  background-color: lightgreen;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s; }
+  .btn:hover {
+    color: white;
+    background-color: darkgreen; }
+  .btn:active {
+    transform: scale(0.97); }
+
+.condition {
+  text-align: left;
+  width: 100%;
+  font-size: 1.2rem; }
+
+/*# sourceMappingURL=style.css.map */

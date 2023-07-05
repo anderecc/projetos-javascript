@@ -1,0 +1,202 @@
+$colorLetters:#e0d8d8de
+    
+    
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    position: relative
+    width: 100%
+    height: 100vh
+    background-image: url("../technology/background-technology-mobile.jpg") 
+    background-repeat: no-repeat
+    background-size: cover
+
+.main
+    display: flex
+    flex-direction: column
+    align-items: center
+    .main-uper
+        text-transform: uppercase
+        font-family: 'Cinzel', serif
+        color: white
+        font-weight: normal 
+    .img-icon
+        width: 100%
+        height: 200px
+        margin: 20px 0
+    .vehicle-img
+        background-size: 100%
+        background-image: url("../technology/image-launch-vehicle-landscape.jpg")
+        background-repeat: no-repeat
+
+    .spaceport-img
+        background-image: url("../technology/image-spaceport-landscape.jpg")
+        background-size: 100%
+        background-repeat: no-repeat
+
+    .capsule-img
+        background-image: url("../technology/image-space-capsule-landscape.jpg")
+        background-size: 100%
+        background-repeat: no-repeat
+
+    nav        
+        width: 100%
+        margin: 10px 0
+        ul
+            display: flex
+            justify-content: space-evenly
+            li
+                list-style: none
+                position: relative
+                width: 30px
+                height: 30px
+                display: flex
+                align-items: center
+                justify-content: center
+                a
+                    text-decoration: none
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    width: 100%
+                    height: 100%
+                    color: $colorLetters
+                    cursor: pointer
+                    font-family: 'Barlow Condensed', sans-serif
+                    font-size: 1.2em
+                    border: 2px #dbd4d493 solid
+                    border-radius: 50%
+                    &:hover
+                        transform: translateY(-1px)
+                        transition: all .3s
+                .link-ativo
+                    border-color: white
+                    color: black
+                    font-weight: bolder
+                    background-color: white
+
+
+.main-section
+    text-align: center
+    padding: 0 15px
+    animation-name: opaciting
+    animation-duration: .8s
+    animation-fill-mode: forwards
+    animation-iteration-count: 1
+
+    h2
+        text-transform: uppercase
+        padding:10px 0    
+        font-size: 1em
+        color: $colorLetters
+        font-weight: normal
+        font-family: 'Cinzel', serif
+    > p
+        font-family: 'Barlow Condensed', sans-serif
+        color: $colorLetters
+        font-size: 1.1em
+        letter-spacing: 1px
+        word-spacing: 2px
+        line-height: 1.3
+    .terminology
+        font-size: 1.5em
+        text-transform: uppercase
+        padding-bottom:10px   
+
+.main-menu
+    padding-top:82px 
+
+$layout-breakpoint-tablet: 481px
+$layout-breakpoint-desktop: 720px
+
+@media (min-width: $layout-breakpoint-tablet)
+    body
+        background-image: url("../technology/background-technology-tablet.jpg")
+    .main
+        .main-uper
+            font-size: .9em
+        .main-title
+            align-self: flex-start
+            padding-left: 20px
+        .img-icon
+            height: 250px
+        nav        
+            ul
+                justify-content: center
+                li
+                    margin: 0 15px
+                    a
+                        font-size: 1em
+                        &:hover
+                            transform: translateY(-1px)
+                            transition: all .3s
+                            color: white
+.main-section
+    h2
+        font-size: 1.5em
+        padding: 0
+
+        color: #dbd4d493
+    > p
+        font-size: 1em
+    .main-about
+        font-size: 1em
+
+@media (min-width: $layout-breakpoint-desktop)
+    body
+        background-image: url("../technology/background-technology-desktop.jpg")
+        overflow: hidden
+    main
+        padding: 0 50px 
+    .main
+        display: grid
+        grid-row-gap: 50px
+        grid-column-gap: 20px
+        .main-uper
+            padding: 0
+        .main-title
+            grid-column: 1 / 3
+            grid-row: 1 / 2
+            font-size: 1.5em
+        .img-icon
+            grid-column: 3 / 4
+            grid-row: 2 / 4
+            height: 300px
+            width: 300px
+        .vehicle-img
+            background-image: url("../technology/image-launch-vehicle-portrait.jpg")
+        .spaceport-img
+            background-image: url("../technology/image-spaceport-portrait.jpg")
+        .capsule-img
+            background-image: url("../technology/image-space-capsule-portrait.jpg")
+        nav
+            grid-column: 1 / 2
+            grid-row: 2 / 4  
+            width: 100%
+            height: 100%  
+            ul
+                height: 100%  
+                flex-direction: column
+                justify-content: center
+                li
+                    margin: 20% 0
+                    width: 50px
+                    height: 50px
+    .main-section
+        grid-column: 2 / 3
+        grid-row: 2 / 4
+        text-align: left
+        h2
+            font-size: 1em
+        .terminology
+            font-size: 2.5em
+        .main-about
+            padding: 0 10% 0 0 
+
+
+
+
+

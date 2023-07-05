@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: wheat; }
+
+.slider-container {
+  border-radius: 10px;
+  width: 500px;
+  height: 300px;
+  box-shadow: 2px 4px 8px;
+  position: relative;
+  overflow: hidden; }
+
+.image-container {
+  display: flex;
+  transition: all 0.3s; }
+
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer; }
+  .btn:active {
+    transform: scale(0.95) translateY(-50%); }
+
+.left {
+  left: 5%; }
+
+.right {
+  right: 5%; }
+
+/*# sourceMappingURL=style.css.map */

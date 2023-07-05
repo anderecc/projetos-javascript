@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Epilogue', sans-serif ;
+    text-decoration: none;
+    list-style: none ;
+    overflow: hidden;
+}
+
+html{
+    height: 100vh;
+    overflow: auto;
+}
+body{
+    overflow: auto;
+    position: relative;
+    background-color:hsl(0, 0%, 98%);
+}
+
+.header-span{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-right: 20px;
+}
+
+.header{
+    display: block;
+    width: 100%;
+    height: 80px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.header-logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+#header-btn-menu:hover, #header-btn-menu-collapse:hover{
+    color: rgb(70, 68, 68);
+    transition: all .5s;
+}
+#header-btn-menu, #header-btn-menu-collapse{
+    font-size: 1.5em;
+    width:  50px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    border: none;
+    background-color: transparent;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+#header-btn-menu i{
+    margin-right: 10%;
+}
+
+#header-btn-menu-collapse{
+    width: 100%;
+}
+
+.header-menu-mobile{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    border-left: 1px gray solid;
+    font-weight: 600;
+    height: 100%;
+    width: 60%;
+    background-color: white;
+    padding: 20px 20px 0px 20px;
+    animation-name: OpenMenu;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    z-index: 10;
+}
+.header-menu-desktop{
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    background-color: transparent;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+
+.header-menu-desktop ul{
+    display: flex;
+
+}
+
+
+.login{
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 20px;
+}
+
+.navigation li a, .login li a{
+    position: relative;
+    color: gray;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    padding: 10px 5px;
+}
+
+.navigation li a:hover, .login li a:hover{
+    color: rgba(0, 0, 0, 0.973);
+    transition: all .3s;
+}
+
+.navigation li:hover .efeito-li::before, .login li:hover .efeito-li::before{
+    content: '';
+    border-bottom: 2px rgba(0, 0, 0, 0.719) solid;
+    width: 50%;
+    position: absolute;
+    bottom: 0px;
+    animation-name: efeitohover ;
+    animation-iteration-count: 1;
+    animation-duration: .7s;
+    animation-fill-mode: forwards;
+}
+
+.menu-features, .menu-company{
+    font-size: .9em;
+    padding-top: 10px;
+}
+
+.main-image{
+    width: 100%;
+    height: 40vh;
+    width: 90%;
+    margin: auto;
+}
+
+.main-image img{
+    width: 100%;
+    height: 100%;
+}
+
+.hero-text{
+    text-align: center;
+    padding: 30px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.hero-text h1{
+    font-size: 2em;
+}
+
+.hero-text p{
+    color: rgb(48, 47, 47);
+    font-size: .9em;
+
+}
+
+.hero-text a{
+    text-align: center;
+    font-size: .9em;
+    width: 120px;
+    background-color: black;
+    color: white;
+    padding: 12px 10px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+}
+
+.hero-text a:hover{
+    border: 1px solid black;
+    background-color:  transparent;
+    color: black;
+    font-weight: 600;
+    transition: all .5s;
+
+}
+
+footer{
+    width: 100%;
+}
+footer ul{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    
+}
+
+footer ul li{
+    height: 15px;
+    margin-top: 20px;
+
+}
+footer ul li img{
+    height: 100%;
+}
+
+
