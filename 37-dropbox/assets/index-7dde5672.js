@@ -1,41 +1,4 @@
-/* eslint-disable no-undef */
-export let selectedElements = [];
-
-export const formatDate = (duration) => {
-    let seconds = parseInt((duration / 1000) % 60);
-    let minutes = parseInt((duration / (1000 * 60)) % 60);
-    let hours = parseInt((duration / (1000 * 60 * 60)) % 60);
-
-    if (hours > 0) {
-        return `${hours}horas, ${minutes} minutes e ${seconds} segundos`;
-    }
-
-    if (minutes > 0) {
-        return `${minutes} minutes e ${seconds} segundos`;
-    }
-
-    if (seconds > 0) {
-        return `${seconds} segundos`;
-    }
-
-    return '0 segundos';
-};
-
-export const showProgress = (value) => {
-    if (!value) {
-        $bar_loading.style.display = 'none';
-        $input_file.value = '';
-        $btn_send_file.disabled = false;
-    } else {
-        $bar_loading.style.display = 'block';
-        $btn_send_file.disabled = true;
-    }
-};
-
-export const verifyType = (file) => {
-    switch (file.type) {
-        case 'folder':
-            return `<svg
+(function(){const e=document.createElement("link").relList;if(e&&e.supports&&e.supports("modulepreload"))return;for(const o of document.querySelectorAll('link[rel="modulepreload"]'))l(o);new MutationObserver(o=>{for(const i of o)if(i.type==="childList")for(const a of i.addedNodes)a.tagName==="LINK"&&a.rel==="modulepreload"&&l(a)}).observe(document,{childList:!0,subtree:!0});function n(o){const i={};return o.integrity&&(i.integrity=o.integrity),o.referrerPolicy&&(i.referrerPolicy=o.referrerPolicy),o.crossOrigin==="use-credentials"?i.credentials="include":o.crossOrigin==="anonymous"?i.credentials="omit":i.credentials="same-origin",i}function l(o){if(o.ep)return;o.ep=!0;const i=n(o);fetch(o.href,i)}})();let k=[];const E=t=>{let e=parseInt(t/1e3%60),n=parseInt(t/(1e3*60)%60),l=parseInt(t/(1e3*60*60)%60);return l>0?`${l}horas, ${n} minutes e ${e} segundos`:n>0?`${n} minutes e ${e} segundos`:e>0?`${e} segundos`:"0 segundos"},w=t=>{t?(y.style.display="block",v.disabled=!0):(y.style.display="none",m.value="",v.disabled=!1)},L=t=>{switch(t.type){case"folder":return`<svg
                     width="160"
                     height="160"
                     viewBox="0 0 160 160"
@@ -53,12 +16,7 @@ export const verifyType = (file) => {
                         ></path>
                     </g>
                 </svg>
-            `;
-        case 'image/jpeg':
-        case 'image/png':
-        case 'image/jpg':
-        case 'image/gif':
-            return `<svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"      x="0px" y="0px" width="160px" height="160px" viewBox="0 0 160 160" enable-background="new 0 0 160 160" xml:space="preserve">
+            `;case"image/jpeg":case"image/png":case"image/jpg":case"image/gif":return`<svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"      x="0px" y="0px" width="160px" height="160px" viewBox="0 0 160 160" enable-background="new 0 0 160 160" xml:space="preserve">
                         <filter height="102%" width="101.4%" id="mc-content-unknown-large-a" filterUnits="objectBoundingBox" y="-.5%" x="-.7%">
                             <feOffset result="shadowOffsetOuter1" in="SourceAlpha" dy="1"></feOffset>
                             <feColorMatrix values="0 0 0 0 0.858823529 0 0 0 0 0.870588235 0 0 0 0 0.88627451 0 0 0 1 0" in="shadowOffsetOuter1"></feColorMatrix>
@@ -94,9 +52,7 @@ export const verifyType = (file) => {
                             <path fill-rule="evenodd" clip-rule="evenodd" fill="#848484" d="M74.188,76.557c0.01,2.266-1.932,4.223-4.221,4.255
                                 c-2.309,0.033-4.344-1.984-4.313-4.276c0.03-2.263,2.016-4.213,4.281-4.206C72.207,72.338,74.179,74.298,74.188,76.557z"></path>
                         </g>
-                    </svg>`;
-        case 'application/pdf':
-            return `<svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="160px" height="160px" viewBox="0 0 160 160" enable-background="new 0 0 160 160" xml:space="preserve">
+                    </svg>`;case"application/pdf":return`<svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="160px" height="160px" viewBox="0 0 160 160" enable-background="new 0 0 160 160" xml:space="preserve">
             <filter height="102%" width="101.4%" id="mc-content-unknown-large-a" filterUnits="objectBoundingBox" y="-.5%" x="-.7%">
                 <feOffset result="shadowOffsetOuter1" in="SourceAlpha" dy="1"></feOffset>
                 <feColorMatrix values="0 0 0 0 0.858823529 0 0 0 0 0.870588235 0 0 0 0 0.88627451 0 0 0 1 0" in="shadowOffsetOuter1"></feColorMatrix>
@@ -126,10 +82,7 @@ export const verifyType = (file) => {
                 M81.955,86.183c-0.912,0.01-2.209,0.098-1.733-1.421c0.264-0.841,0.955-2.04,1.622-2.162c1.411-0.259,1.409,1.421,2.049,2.186
                 C84.057,86.456,82.837,86.174,81.955,86.183z M96.229,94.8c-1.14-0.082-1.692-1.111-1.785-2.033
                 c-0.131-1.296,1.072-0.867,1.753-0.876c0.796-0.011,1.668,0.118,1.588,1.293C97.394,93.857,97.226,94.871,96.229,94.8z"></path>
-        </svg>`;
-        case 'audio/mp3':
-        case 'audio/ogg':
-            return `<svg width="160" height="160" viewBox="0 0 160 160" class="mc-icon-template-content tile__preview tile__preview--icon">
+        </svg>`;case"audio/mp3":case"audio/ogg":return`<svg width="160" height="160" viewBox="0 0 160 160" class="mc-icon-template-content tile__preview tile__preview--icon">
             <title>content-audio-large</title>
             <defs>
                 <rect id="mc-content-audio-large-b" x="30" y="43" width="100" height="74" rx="4"></rect>
@@ -145,10 +98,7 @@ export const verifyType = (file) => {
                 </g>
                 <path d="M67 60c0-1.657 1.347-3 3-3 1.657 0 3 1.352 3 3v40c0 1.657-1.347 3-3 3-1.657 0-3-1.352-3-3V60zM57 78c0-1.657 1.347-3 3-3 1.657 0 3 1.349 3 3v4c0 1.657-1.347 3-3 3-1.657 0-3-1.349-3-3v-4zm40 0c0-1.657 1.347-3 3-3 1.657 0 3 1.349 3 3v4c0 1.657-1.347 3-3 3-1.657 0-3-1.349-3-3v-4zm-20-5.006A3 3 0 0 1 80 70c1.657 0 3 1.343 3 2.994v14.012A3 3 0 0 1 80 90c-1.657 0-3-1.343-3-2.994V72.994zM87 68c0-1.657 1.347-3 3-3 1.657 0 3 1.347 3 3v24c0 1.657-1.347 3-3 3-1.657 0-3-1.347-3-3V68z" fill="#637282"></path>
             </g>
-        </svg>`;
-        case 'video/mp4':
-        case 'video/quicktime':
-            return `<svg width="160" height="160" viewBox="0 0 160 160" class="mc-icon-template-content tile__preview tile__preview--icon">
+        </svg>`;case"video/mp4":case"video/quicktime":return`<svg width="160" height="160" viewBox="0 0 160 160" class="mc-icon-template-content tile__preview tile__preview--icon">
                 <title>content-video-large</title>
                 <defs>
                     <rect id="mc-content-video-large-b" x="30" y="43" width="100" height="74" rx="4"></rect>
@@ -164,9 +114,7 @@ export const verifyType = (file) => {
                     </g>
                     <path d="M69 67.991c0-1.1.808-1.587 1.794-1.094l24.412 12.206c.99.495.986 1.3 0 1.794L70.794 93.103c-.99.495-1.794-.003-1.794-1.094V67.99z" fill="#637282"></path>
                 </g>
-            </svg>`;
-        default:
-            return `<svg
+            </svg>`;default:return`<svg
                     width="160"
                     height="160"
                     viewBox="0 0 160 160"
@@ -217,46 +165,13 @@ export const verifyType = (file) => {
                         </g>
                     </g>
                 </svg>
-            `;
-    }
-};
-
-export const verifySelectedLength = (list) => {
-    const allSelected = list.querySelectorAll('.selected');
-
-    selectedElements = allSelected;
-
-    switch (allSelected.length) {
-        case 0:
-            $btn_delete.style.display = 'none';
-            $btn_rename.style.display = 'none';
-            break;
-
-        case 1:
-            $btn_delete.style.display = 'block';
-            $btn_rename.style.display = 'block';
-            break;
-
-        case 2:
-            $btn_rename.style.display = 'none';
-            break;
-
-        default:
-            break;
-    }
-};
-
-export const onUploadProgress = (e) => {
-    const loaded = e.loaded;
-    const total = e.total;
-
-    const percent = (loaded / total) * 100;
-    // a cada progress ele vai pegar uma nova data e diminuir com a data que começou
-    const timeSpent = Date.now() - e.startUpload;
-    // aqui ele vai ver quanto que falta na porcentagem e multiplicar pelo tempo do progress atual
-    const timeLeft = (100 - percent) * timeSpent;
-
-    const bar = $bar_loading.querySelector('.mc-progress-bar-fg');
-    bar.style.width = `${percent}%`;
-    $time_left.innerText = formatDate(timeLeft);
-};
+            `}},B=t=>{const e=t.querySelectorAll(".selected");switch(k=e,e.length){case 0:x.style.display="none",h.style.display="none";break;case 1:x.style.display="block",h.style.display="block";break;case 2:h.style.display="none";break}},z=t=>{const e=t.loaded,n=t.total,l=e/n*100,o=Date.now()-t.startUpload,i=(100-l)*o,a=y.querySelector(".mc-progress-bar-fg");a.style.width=`${l}%`,$.innerText=E(i)},A={apiKey:"AIzaSyB3KaZork75-Oy-7V3qcAvK9y5TDCOaJHQ",authDomain:"dropbox-clone-685ac.firebaseapp.com",databaseURL:"https://dropbox-clone-685ac-default-rtdb.firebaseio.com",projectId:"dropbox-clone-685ac",storageBucket:"dropbox-clone-685ac.appspot.com",messagingSenderId:"319894216235",appId:"1:319894216235:web:52d4f79588f2f11769546e"};firebase.apps.length||firebase.initializeApp(A);let r=firebase.database().ref("HOME");const g=t=>(t||(t=s.join("/")),r=firebase.database().ref(t),r),v=document.getElementById("btn-send-file"),m=document.getElementById("files"),y=document.getElementById("react-snackbar-root");document.querySelector(".filename");const $=document.querySelector(".timeleft"),u=document.getElementById("list-of-files-and-directories"),I=document.getElementById("btn-new-folder"),h=document.getElementById("btn-rename"),x=document.getElementById("btn-delete"),_=document.getElementById("browse-location");let s=["HOME"],b="";v.addEventListener("click",t=>{t.preventDefault(),m.click()});m.addEventListener("change",t=>{t.preventDefault(),w(!0),D(m.files).then(e=>{r.push().set({nameFile:e[0].name,type:e[0].contentType,path:e[0].customMetadata.downloadURL,size:e[0].size}),p()}).catch(e=>console.log(e))});x.addEventListener("click",()=>{j(k).then(t=>{t.forEach(e=>{r.child(e.key).remove(),p()})}).catch(t=>console.log(t))});h.addEventListener("click",()=>{S(k[0])});I.addEventListener("click",()=>{const t=prompt("Digite um nome para a nova pasta.");t&&(r.push().set({nameFile:t,type:"folder",path:s.join("/")}),p())});function S(t){r.child(t.dataset.key).get().then(e=>{if(e.exists()){const n=e.val(),l=prompt("Digite um novo nome");l?(r.child(t.dataset.key).set({...n,nameFile:l}),p()):alert("Para deve colocar algum nome para alterar.")}else console.log("No data available")}).catch(e=>console.log(e))}function j(t){const e=[];return[...t].forEach(n=>{e.push(new Promise((l,o)=>{const i=n.dataset.key;n.dataset.type==="folder"?F(s.join("/"),n.dataset.name).then(()=>{l({key:i})}).catch(a=>o(a)):n.dataset.type&&O(s.join("/"),n.dataset.name).then(()=>{l({key:i})}).catch(a=>o(a))}))}),Promise.all(e)}function D(t){const e=[];return[...t].forEach(n=>e.push(new Promise((l,o)=>{const i=Date.now();let d=firebase.storage().ref(s.join("/")).child(n.name).put(n);d.on("state_changed",c=>{const f=c.bytesTransferred,C=c.totalBytes;z({loaded:f,total:C,startUpload:i})},c=>{console.log(c),w(!1),o(c)},()=>{w(!1),d.snapshot.ref.getDownloadURL().then(c=>{d.snapshot.ref.updateMetadata({customMetadata:{downloadURL:c}}).then(f=>{l(f)}).catch(f=>{console.error("Error update metadata:",f),o(f)})})})}))),Promise.all(e)}function H(){let t=document.createElement("nav"),e=[];for(let n=0;n<s.length;n++){let l=document.createElement("span"),o=s[n];e.push(o),n+1===s.length?l.innerHTML=o:(l.setAttribute("class","breadcrumb-segment__wrapper"),l.innerHTML=`  <span class="ue-effect-container uee-BreadCrumbSegment-link-0">
+                                    <a href="#" data-path="${e.join("/")}" class="breadcrumb-segment">${o}</a>
+                                </span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" class="mc-icon-template-stateless" style="
+                                        top: 4px; position: relative; ">
+                                        <title>arrow-right</title>
+                                        <path d="M10.414 7.05l4.95 4.95-4.95 4.95L9 15.534 12.536 12 9 8.464z" fill="#637282" fill-rule="evenodd"></path>
+                                </svg>`),t.appendChild(l)}_.innerHTML=t.innerHTML,_.querySelectorAll("a").forEach(n=>n.addEventListener("click",l=>{l.preventDefault(),s=l.target.dataset.path.split("/"),M()}))}function T(t,e){if(e.type){const n=document.createElement("li");n.dataset.key=t,n.dataset.type=e.type,n.dataset.name=e.nameFile,n.addEventListener("click",l=>{const o=document.querySelector(".selected");let i=null,a=null;u.childNodes.forEach((c,f)=>{l.ctrlKey?c.dataset.key===t&&c.classList.toggle("selected"):c.dataset.key===t?c.classList.toggle("selected"):c.classList.remove("selected"),o===c&&(i=f),n===c&&(a=f)});const d=[i,a].sort();if(i!==null&&a!==null&&l.shiftKey)for(let c=d[0];c<=d[1];c++)u.childNodes[c].classList.add("selected");B(u)}),n.addEventListener("dblclick",()=>{switch(n.dataset.type){case"folder":s.push(e.nameFile),M();break;default:window.open(e.path);break}}),n.innerHTML=`${L(e)}
+    <div class="name text-center">${e.nameFile}</div>
+    `,u.appendChild(n)}}function p(){u.innerHTML="",b=s.join("/"),r.on("value",t=>{t.forEach(e=>{const n=e.key,l=e.val();T(n,l)})})}function M(){b&&(g(b),r.off("value"),g(s.join("/"))),H(),p()}function O(t,e){return firebase.storage().ref(t).child(e).delete()}function F(t,e){return new Promise((n,l)=>{g(t+"/"+e),r.on("value",o=>{o.forEach(i=>{const a=i.val();a.key=i.key,a.type==="folder"?F(t+"/"+e,a.nameFile).then(()=>{n({key:a.key})}).catch(d=>l(d)):a.type&&O(t+"/"+e,a.nameFile).then(()=>{n({key:a.key})}).catch(d=>l(d))}),r.remove(),r.off("value")}),g(s.join("/"))})}M();
